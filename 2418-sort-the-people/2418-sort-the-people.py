@@ -1,7 +1,19 @@
 class Solution:
     def sortPeople(self, names: List[str], heights: List[int]) -> List[str]:
         
-        # Selection Sort
+        # O(nlogn)
+        
+        res = []
+        for i in range(len(names)):
+            res.append([heights[i], names[i]])
+        
+        res = sorted(res, reverse=True)
+        
+        return [n for h, n in res]
+        
+        
+        '''
+        # Selection Sort O(n^2)
         
         h = len(heights)
         
@@ -19,4 +31,5 @@ class Solution:
                 names[i], names[k] = names[k], names[i]
             
         return names
+        '''
     
