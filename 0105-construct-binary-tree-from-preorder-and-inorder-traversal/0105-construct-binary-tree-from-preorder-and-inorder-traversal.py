@@ -7,6 +7,8 @@
 class Solution:
     def buildTree(self, preorder: List[int], inorder: List[int]) -> Optional[TreeNode]:
         
+        
+        # O(n)
         if inorder:
             i = inorder.index(preorder.pop(0))
             root = TreeNode(inorder[i])
