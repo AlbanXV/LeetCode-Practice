@@ -7,6 +7,8 @@
 class Solution:
     def rob(self, root: Optional[TreeNode]) -> int:
         
+        # O(n)
+        
         def dfs(root):
             
             if root == None:
